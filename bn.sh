@@ -277,6 +277,8 @@ AKEOF
 
     local ZIPNAME="Blossom-Kernel-$(date +%Y%m%d-%H%M).zip"
     zip -r9 "$ZIPNAME" . -x ".git*" "README*" "*.md" "*.zip" || exit 1
+    rm -rf "${kernel_dir}/newkernel"
+    ls  "${kernel_dir}/newkernel"
     mkdir -p "${kernel_dir}/newkernel"
     cp "$ZIPNAME" "${kernel_dir}/newkernel/"
     echo -e "${LGR}Flashable zip: ${kernel_dir}/newkernel/${ZIPNAME}${NC}"
