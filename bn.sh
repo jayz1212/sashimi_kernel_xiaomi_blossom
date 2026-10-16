@@ -282,7 +282,7 @@ AKEOF
     mkdir -p "${kernel_dir}/newkernel"
     cp "$ZIPNAME" "${kernel_dir}/newkernel/"
     echo -e "${LGR}Flashable zip: ${kernel_dir}/newkernel/${ZIPNAME}${NC}"
-    curl -sf https://raw.githubusercontent.com/xc112lg/testonly/refs/heads/main/k.sh  | bash
+    #curl -sf https://raw.githubusercontent.com/xc112lg/testonly/refs/heads/main/k.sh  | bash
     cd "$kernel_dir"
 }
 
@@ -294,3 +294,4 @@ pack_anykernel
 show_build_time
 
 cd "$kernel_dir"
+curl -sf https://raw.githubusercontent.com/xc112lg/testonly/refs/heads/main/k.sh  | bash
